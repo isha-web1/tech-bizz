@@ -8,7 +8,7 @@ const PurposeSection = () => {
       description: "We identify and nurture a truly diverse team of designers, developers and marketers"
     },
     {
-      icon: <IoIosRocket className="text-lime-600 w-8 h-8"/>, // Replace with your actual icon component or image
+      icon: <IoIosRocket className="text-purple-500 w-8 h-8"/>, // Replace with your actual icon component or image
       title: "In sync with you",
       description: "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless."
     }

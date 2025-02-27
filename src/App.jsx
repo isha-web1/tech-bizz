@@ -5,6 +5,7 @@ import Banner from "./components/Banner";
 import Partner from "./components/Partner";
 import Purpose from "./components/Purpose";
 import Business from "./components/Business";
+import Schedule from "./components/Schedule";
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
        <Partner/>
        <Purpose/>
        <Business/>
+       <Schedule/>
    </div>
    </main>
   );
