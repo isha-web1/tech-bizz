@@ -10,6 +10,8 @@ import Monitor from "./components/Monitor";
 import Pricing from "./components/Pricing";
 import Feature from "./components/Feature";
 import Testimonial from "./components/Testimonial";
+import Newsletter from "./components/NewsLatter";
+import Footer from "./components/Footer";
 
 function App() {
   
@@ -28,6 +30,8 @@ function App() {
        <Pricing/>
        <Feature/>
        <Testimonial/>
+       <Newsletter/>
+       <Footer/>
    </div>
    </main>
   );
