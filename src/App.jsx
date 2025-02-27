@@ -2,6 +2,8 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
+import Partner from "./components/Partner";
+import Purpose from "./components/Purpose";
 
 function App() {
   
@@ -12,6 +14,8 @@ function App() {
    <div className="overflow-hidden">
        <Navbar/>
        <Banner/>
+       <Partner/>
+       <Purpose/>
    </div>
    </main>
   );
