@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Partner from "./components/Partner";
 import Purpose from "./components/Purpose";
+import Business from "./components/Business";
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
        <Banner/>
        <Partner/>
        <Purpose/>
+       <Business/>
    </div>
    </main>
   );
