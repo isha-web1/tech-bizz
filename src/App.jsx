@@ -8,6 +8,8 @@ import Business from "./components/Business";
 import Schedule from "./components/Schedule";
 import Monitor from "./components/Monitor";
 import Pricing from "./components/Pricing";
+import Feature from "./components/Feature";
+import Testimonial from "./components/Testimonial";
 
 function App() {
   
@@ -24,6 +26,8 @@ function App() {
        <Schedule/>
        <Monitor/>
        <Pricing/>
+       <Feature/>
+       <Testimonial/>
    </div>
    </main>
   );
