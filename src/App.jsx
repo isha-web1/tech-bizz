@@ -6,6 +6,8 @@ import Partner from "./components/Partner";
 import Purpose from "./components/Purpose";
 import Business from "./components/Business";
 import Schedule from "./components/Schedule";
+import Monitor from "./components/Monitor";
+import Pricing from "./components/Pricing";
 
 function App() {
   
@@ -20,6 +22,8 @@ function App() {
        <Purpose/>
        <Business/>
        <Schedule/>
+       <Monitor/>
+       <Pricing/>
    </div>
    </main>
   );

@@ -30,7 +30,7 @@ const Schedule = () => {
         >
           <span 
             
-            className="text-orange-500 font-semibold"
+            className="text-purple-500 font-semibold"
           >
             SCHEDULE
           </span>
