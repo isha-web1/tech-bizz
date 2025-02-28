@@ -1,8 +1,24 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and responsive landing page built with React, Tailwind CSS, and Framer Motion animations.
 
-Currently, two official plugins are available:
+## live on : https://zesty-platypus-857f5c.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
+
+- Modern and clean design
+- Fully responsive layout
+- Smooth animations with Framer Motion
+- Interactive components
+- Testimonials carousel
+- Newsletter subscription form
+- Company logo showcase
+- Pricing calculator
+- Service showcase sections
+
+## 🛠️ Built With
+
+- React.js
+- Tailwind CSS
+- Framer Motion
+- Swiper.js
+- React Icons
