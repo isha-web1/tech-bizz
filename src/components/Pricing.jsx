@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 
 const Pricing = () => {
@@ -9,76 +11,76 @@ const Pricing = () => {
   const businessPrice = Math.round(7500 * (productCount / 50))
 
   return (
-    <section 
-     
+    <motion.section 
+    variants={fadeIn('up', 0.2)}
       initial="hidden"
       whileInView="show"
       className="py-20 px-4"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 
-          
+        <motion.h2 
+           variants={textVariant(0.3)}
           className="text-3xl md:text-4xl font-bold text-center mb-16"
         >
           Pricing
-        </h2>
+        </motion.h2>
         
-        <div 
-          
+        <motion.div 
+           variants={fadeIn('up', 0.4)}
           className="grid md:grid-cols-2 gap-8 mb-12"
         >
           {/* Starter Plan */}
-          <div 
-            
+          <motion.div 
+             variants={fadeIn('right', 0.5)}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
-            <h3 
-              
+            <motion.h3 
+               variants={fadeIn('up', 0.6)}
               className="text-xl text-gray-600 mb-4"
             >
               Starter
-            </h3>
-            <p 
-              
+            </motion.h3>
+            <motion.p 
+               variants={fadeIn('up', 0.7)}
               className="text-3xl font-bold mb-6"
             >
               ${starterPrice}/mo
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
           
           {/* Business Plan */}
-          <div 
-            
+          <motion.div 
+             variants={fadeIn('left', 0.5)}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
-            <h3 
-              
+            <motion.h3 
+                 variants={fadeIn('up', 0.6)}
               className="text-xl text-gray-600 mb-4"
             >
               Business
-            </h3>
-            <p 
-              
+            </motion.h3>
+            <motion.p 
+              variants={fadeIn('up', 0.7)} 
               className="text-3xl font-bold mb-6"
             >
               ${businessPrice}/mo
-            </p>
-          </div>
-        </div>
+            </motion.p>
+          </motion.div>
+        </motion.div>
 
-        <div 
-          
+        <motion.div 
+          variants={fadeIn('up', 0.8)}
           className="max-w-xl mx-auto"
         >
-          <p 
-            
+          <motion.p 
+            variants={fadeIn('up', 0.9)} 
             className="text-center text-gray-600 mb-4"
           >
             {productCount} products
-          </p>
+          </motion.p>
           
-          <div 
-            
+          <motion.div 
+             variants={fadeIn('up', 1.0)}
             className="relative px-4"
           >
             <div className="flex items-center gap-2">
@@ -93,30 +95,30 @@ const Pricing = () => {
               />
               <span className="text-xs sm:text-sm text-gray-600">50</span>
             </div>
-          </div>
+          </motion.div>
 
-          <div 
-            
+          <motion.div 
+              variants={fadeIn('up', 1.1)}
             className="text-center mt-12"
           >
-            <p 
-             
+            <motion.p 
+              variants={fadeIn('up', 1.2)}
               className="text-xl text-gray-600 mb-4"
             >
               Ready to get started?
-            </p>
-            <button 
-              
+            </motion.p>
+            <motion.button 
+             variants={fadeIn('up', 1.3)} 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-lime-600 text-white px-6 py-3 rounded-lg hover:bg-lime-700 transition-colors cursor-pointer"
             >
               Get Started
-            </button>
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

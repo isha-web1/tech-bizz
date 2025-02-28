@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
-import { HiMenu, HiX } from 'react-icons/hi'
+import { HiMenu, HiX } from 'react-icons/hi';
+import { motion } from "framer-motion";
+import { fadeIn} from "../utils/motion";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,23 +16,25 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
+    <motion.div  variants={fadeIn('down', 0.2)}  initial="hidden" whileInView="show"
+    viewport={{ once: true }} className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
       <div className="w-full flex justify-between items-center container mx-auto px-4 sm:px-6 lg:px-8 md:h-20 h-16">
-        <div className="flex items-center gap-1 cursor-pointer w-46">
+        <motion.div variants={fadeIn('right', 0.3)} className="flex items-center gap-1 cursor-pointer w-46">
           <img src={logo} alt="" />
-        </div>
+        </motion.div>
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2"onClick={() => setIsMenuOpen(!isMenuOpen)} >
+        <motion.button variants={fadeIn('left', 0.3)} className="md:hidden p-2"onClick={() => setIsMenuOpen(!isMenuOpen)} >
         {isMenuOpen ? (
             <HiX className="h-6 w-6" />
           ) : (
             <HiMenu className="h-6 w-6" />
           )}
-        </button>
+        </motion.button>
           
-        <div className="hidden md:flex items-center gap-10">
+        <motion.div variants={fadeIn('down', 0.3)} className="hidden md:flex items-center gap-10">
           {navLinks.map((link, index) => (
-            <a
+            <motion.a
+              variants={fadeIn('down', 0.1 * (index + 1))}
               key={index}
               href={link.href}
               onClick={() => setActiveLink(link.href)}
@@ -42,31 +46,32 @@ const Navbar = () => {
                 }`}
             >
               {link.label}
-            </a>
+            </motion.a>
           ))}
-        </div>
-        <button className="hidden md:block bg-lime-600 text-white px-6 py-2.5 rounded-lg hover:bg-lime-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-lime-100">
+        </motion.div>
+        <motion.button variants={fadeIn('left', 0.3)}whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }} className="hidden md:block bg-lime-600 text-white px-6 py-2.5 rounded-lg hover:bg-lime-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-lime-100">
           <a href="#newsletter">Get in touch</a>
-        </button>
+        </motion.button>
       </div>
      
       {/* Mobile Menu */}
 
       {isMenuOpen && (
-        <div 
-          
+        <motion.div 
+        variants={fadeIn('down', 0.2)}
           initial="hidden"
           animate="show"
           className="md:hidden bg-white border-t border-slate-100 py-4"
         >
-          <div 
-           
+          <motion.div 
+            variants={fadeIn('down', 0.3)}
             className="container mx-auto px-4 space-y-4"
           >
             {navLinks.map((link, index) => (
-              <a
+              <motion.a
                 key={index}
-               
+                variants={fadeIn('right', 0.1 * (index + 1))}
                 href={link.href}
                 onClick={() => {
                   setActiveLink(link.href);
@@ -76,20 +81,20 @@ const Navbar = () => {
                   ${activeLink === link.href ? 'text-lime-600' : 'text-black hover:text-black'}`}
               >
                 {link.label}
-              </a>
+              </motion.a>
             ))}
-            <button 
-              
+            <motion.button 
+               variants={fadeIn('up', 0.4)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="w-full bg-lime-600 text-white px-6 py-2.5 rounded-lg hover:bg-lime-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-lime-100"
             >
               Get in touch
-            </button>
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+        </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
